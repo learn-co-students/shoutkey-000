@@ -24,6 +24,9 @@ describe Link do
       # Return this as the value of #shoutkey
       link = Link.new('http://hostiledeveloper.com')
       expect(link.shoutkey).to match(/\b\w+\b/)
+	  # This default test is soooo ugly, i had to test something intermediate...
+	  #expect(link.shoutkey).to eq('http://shoutkey.com/new?url=http%3A%2F%2Fhostiledeveloper.com%2F')
+	  #expect(link.shoutkey).to eq('')
     end
   end
 end
